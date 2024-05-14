@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { EB_Garamond, IBM_Plex_Mono} from "next/font/google";
+import { EB_Garamond, IBM_Plex_Mono, Inter} from "next/font/google";
 import "./globals.css";
 
 const gara = EB_Garamond({ subsets: ["latin"] ,
 variable: '--font-gara',
+});
+const inter = Inter({ subsets: ["latin"] ,
+variable: '--font-inter',
 });
 const ibm = IBM_Plex_Mono({
   weight: '400',
@@ -44,7 +47,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Minimum Viable Demos" />
         <meta name="twitter:description" content="An evening showcase of ambitious projects exploring technology, art, and science." />
       </head>
-      <body className={`bg-white ${gara.className} ${ibm.variable}`}>{children}</body>
+      <body className={`bg-white ${gara.variable} ${inter.variable} ${ibm.variable}`}>{children}</body>
     </html>
   );
 }
