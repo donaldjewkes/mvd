@@ -34,7 +34,7 @@ export default function RootLayout({
         <title>Minimum Viable Demos</title>
         {/* <link rel="stylesheet" href="styles.css" /> */}
 
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
 
         <meta name="title" content="Minimum Viable Demos" />
         <meta name="description" content="An evening showcase of ambitious projects exploring technology, art, and science." />
