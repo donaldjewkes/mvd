@@ -9,36 +9,40 @@ import Draggable from 'react-draggable';
 export default function Home() {
   return (
     
-    <div className="relative bg-white h-screen w-full">
+
+    
+    <div className="">
+      <div className="hidden sm:block relative bg-white h-screen w-full">
       <div className="">
 
         
-      <Draggable>
+        {/* <Draggable>
         <div className="relative w-[425px] h-[400px] rounded-xl bg-neutral-900 border border-neutral-700 overflow-hidden">
-          <div className="absolute w-[423px] h-[398px] border rounded-xl border-white opacity-20"></div>
-            <div className="flex flex-col items-center">
-              <div className="h-8 w-full bg-neutral-700 flex flex-row items-center">
-                <div className="pl-3 flex flex-row items-center space-x-2">
-                  <div className="h-3.5 w-3.5 rounded-full bg-red-400"></div>
-                  <div className="h-3.5 w-3.5 rounded-full bg-yellow-400"></div>
-                  <div className="h-3.5 w-3.5 rounded-full bg-green-400"></div>
-                </div>
+            <div className="absolute w-[423px] h-[398px] border rounded-xl border-white opacity-20"></div>
+                <div className="flex flex-col items-center">
+                  <div className="h-8 w-full bg-neutral-700 flex flex-row items-center">
+                    <div className="pl-3 flex flex-row items-center space-x-2">
+                      <div className="h-3.5 w-3.5 rounded-full bg-red-400"></div>
+                      <div className="h-3.5 w-3.5 rounded-full bg-yellow-400"></div>
+                      <div className="h-3.5 w-3.5 rounded-full bg-green-400"></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col p-5">
+                    <Image className="draggable-false"
+                                  src="/desc.png"
+                                  alt=""
+                                  draggable="false"
+                                  width={400}
+                                  height={400}
+                                  layout=""
+                                  objectFit=""
+                                  priority
+                                />
+                    </div>
               </div>
-              <div className="flex flex-col p-5">
-                <Image className="draggable-false"
-                              src="/desc.png"
-                              alt=""
-                              draggable="false"
-                              width={400}
-                              height={400}
-                              layout=""
-                              objectFit=""
-                              priority
-                            />
-              </div>
-            </div>
-        </div>
-      </Draggable>
+          </div>
+        </Draggable> */}
+
       <div className="absolute top-12 left-12 z-100">          
         <Draggable>
             <div className="drop-shadow-2xl">
@@ -76,6 +80,63 @@ export default function Home() {
         </Draggable>
       </div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-3/4 -translate-y-6/8 z-40">        
+        <Draggable>
+          <div className="drop-shadow-2xl">
+            {/* <a className="text-black" href="/about">test</a> */}
+            <Image className="draggable-false"
+                    src="/hands.png"
+                    alt=""
+                    draggable="false"
+                    width={500}
+                    height={500}
+                    layout=""
+                    objectFit=""
+                    priority
+                  />
+          </div>
+        </Draggable>
+      </div>
+      
+      </div>
+    
+    </div>
+      {/* mobile */}
+      <div className="flex flex-col justify-center p-2 space-y-2">
+      <div className="relativez z-30">          
+        <Draggable>
+            <div className="drop-shadow-2xl">
+                {/* <a className="text-black" href="/about">test</a> */}
+                <Image className="draggable-false rounded-xl"
+                        src="/logoweb.png"
+                        alt=""
+                        draggable="false"
+                        width={150}
+                        height={0}
+                        layout=""
+                        objectFit=""
+                        priority
+                      />
+              </div>
+          </Draggable>
+      </div>
+      <div className="relative z-20">        
+        <Draggable>
+          <div className="drop-shadow-2xl">
+            {/* <a className="text-black" href="/about">test</a> */}
+            <Image className="draggable-false"
+                    src="/terminal.png"
+                    alt=""
+                    draggable="false"
+                    width={400}
+                    height={400}
+                    layout=""
+                    objectFit=""
+                    priority
+                  />
+          </div>
+        </Draggable>
+      </div>
+      <div className="relative z-10">        
         <Draggable>
           <div className="drop-shadow-2xl">
             {/* <a className="text-black" href="/about">test</a> */}
