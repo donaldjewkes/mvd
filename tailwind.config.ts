@@ -25,6 +25,7 @@ const config: Config = {
       fontFamily: {
         'ibm': "var(--font-ibm)", // Add this line
         'inter': "var(--font-inter)", // Add this line
+        'dm': "var(--font-dm)",
       },
     },
   },

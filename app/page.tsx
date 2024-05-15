@@ -162,7 +162,7 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
                   <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
-                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" onClick={handleClose}></button>
+                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
                     <div className="h-3 w-3 rounded-full bg-yelloww"></div>
                     <div className="h-3 w-3 rounded-full bg-greenw"></div>
                     <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">desc.sh</div>
@@ -189,31 +189,38 @@ export default function Home() {
         {IsEighthVisible && eighthPosition && (
           <Draggable>
             <div
-              className="absolute z-50 w-[150px] h-[115px] rounded-xl bg-neutral-800 border border-neutral-800 overflow-hidden drop-shadow-2xl"
+              className="absolute z-50 w-[150px] h-[140px] rounded-xl border border-neutral-800 overflow-hidden drop-shadow-2xl"
               style={{ top: eighthPosition.top, left: eighthPosition.left }}>
 
               <div className="absolute w-[423px] h-[343px] border rounded-innerw border-white opacity-20"></div>
               <div className="flex flex-col">
                 <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
                   <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
-                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" onClick={handleClose}></button>
+                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
                     <div className="h-3 w-3 rounded-full bg-yelloww"></div>
                     <div className="h-3 w-3 rounded-full bg-greenw"></div>
                     <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">hi.inv</div>
                   </div>
                 </div>
-                <div className="absolute z-100 mt-10 w-full">
+                <div className="absolute z-100 mt-7 pt-3 h-32 bg-pink-500 opacity-90 w-full">
                     <a className="cursor-pointer" draggable="false" href="https://forms.gle/wHnKsnj8U9PLc4bN7">
                       <button  type="button" className="group text-gray-900 px-4 py-1 flex flex-row items-center">
                         <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
-                        <div className="text-center text-sm font-ibm text-white">Demo</div>
+                        <div className="text-center text-sm font-dm text-white">Demo</div>
                             <Image draggable="false" className=" rotate-45 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
+                      </button>
+                    </a>
+                    <a className="cursor-pointer" draggable="false" href="https://lu.ma/mvd">
+                      <button  type="button" className="group text-gray-900 rounded px-4 py-1 flex flex-row items-center">
+                        <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
+                        <div className="text-center text-sm font-dm text-white">Attend</div>
+                            <Image draggable="false" className=" rotate-45 transition duration-150 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
                       </button>
                     </a>
                     <a className="cursor-pointer" draggable="false" href="https://twitter.com/mvdemos_">
                       <button  type="button" className="group text-gray-900 rounded px-4 py-1 flex flex-row items-center">
                         <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
-                        <div className="text-center text-sm font-ibm text-white">Attend</div>
+                        <div className="text-center text-sm font-dmx text-white">Twitter</div>
                             <Image draggable="false" className=" rotate-45 transition duration-150 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
                       </button>
                     </a>
@@ -269,7 +276,7 @@ export default function Home() {
               <div className="flex flex-col items-center">
                 <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
                   <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
-                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" onClick={handleSecondClose}></button>
+                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
                     <div className="h-3 w-3 rounded-full bg-yelloww"></div>
                     <div className="h-3 w-3 rounded-full bg-greenw"></div>
                     <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">hands.jpg</div>
