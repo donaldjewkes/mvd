@@ -151,11 +151,11 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className=" relative bg-white h-screen w-full">
+      <div className="hidden sm:block relative bg-white h-screen w-full">
         {isVisible && position && (
           <Draggable>
             <div
-              className="absolute z-50 w-[425px] h-[345px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
+              className=" absolute z-50 w-[425px] h-[345px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
               style={{ top: position.top, left: position.left }}
             >
               <div className="absolute w-[423px] h-[343px] border rounded-innerw border-white opacity-20"></div>
@@ -185,6 +185,7 @@ export default function Home() {
             </div>
           </Draggable>
         )}
+        
 
         {IsEighthVisible && eighthPosition && (
           <Draggable>
@@ -299,7 +300,6 @@ export default function Home() {
             </div>
           </Draggable>
         )}
-      </div>
 
       {IsThirdVisible && thirdPosition && (
           <Draggable>
@@ -469,8 +469,84 @@ export default function Home() {
           </div>
         </Draggable>
         )}
-    
 
+      </div>
+    
+      <div className="sm:hidden">
+        <div className="flex flex-col justify-center p-2 space-y-2">
+        <div className="flex flex-row h-24 w-full space-x-2">
+          <div className="relative">
+                <div className="drop-shadow-2xl">
+                    {/* <a className="text-black" href="/about">test</a> */}
+                    <Image className="draggable-false rounded-xl"
+                            src="/logoweb.png"
+                            alt=""
+                            draggable="false"
+                            width={150}
+                            height={0}
+                            layout=""
+                            objectFit=""
+                            priority
+                          />
+                  </div>
+          </div>
+
+        </div>
+        <div className="relative z-20">
+            <div className="drop-shadow-2xl">
+              {/* <a className="text-black" href="/about">test</a> */}
+              <Image className="draggable-false"
+                      src="/terminal.png"
+                      alt=""
+                      draggable="false"
+                      width={400}
+                      height={400}
+                      layout=""
+                      objectFit=""
+                      priority
+                    />
+            </div>
+        </div>
+        <div className="h-36 w-full rounded-xl border border-neutral-800 overflow-hidden drop-shadow-2xl">
+
+              <div className="absolute w-[423px] h-[343px] border rounded-innerw border-white opacity-20"></div>
+              <div className="flex flex-col">
+                <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                  <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
+                    <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                    <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                    <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">full_website_coming_soon</div>
+                  </div>
+                </div>
+                 <div className="absolute z-100 mt-7 pt-3 h-32 bg-pink-500 opacity-90 w-full">
+                    <a className="cursor-pointer" draggable="false" href="https://forms.gle/wHnKsnj8U9PLc4bN7">
+                      <button  type="button" className="group text-gray-900 px-4 py-1 flex flex-row items-center">
+                        <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
+                        <div className="text-center text-sm font-dm text-white">Demo</div>
+                            <Image draggable="false" className=" rotate-45 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
+                      </button>
+                    </a>
+                    <a className="cursor-pointer" draggable="false" href="https://lu.ma/mvd">
+                      <button  type="button" className="group text-gray-900 rounded px-4 py-1 flex flex-row items-center">
+                        <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
+                        <div className="text-center text-sm font-dm text-white">Attend</div>
+                            <Image draggable="false" className=" rotate-45 transition duration-150 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
+                      </button>
+                    </a>
+                    <a className="cursor-pointer" draggable="false" href="https://twitter.com/mvdemos_">
+                      <button  type="button" className="group text-gray-900 rounded px-4 py-1 flex flex-row items-center">
+                        <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
+                        <div className="text-center text-sm font-dmx text-white">Twitter</div>
+                            <Image draggable="false" className=" rotate-45 transition duration-150 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
+                      </button>
+                    </a>
+                  </div>
+              </div>
+            </div>
+
+      </div>
+      </div>
     
     </div>
       
