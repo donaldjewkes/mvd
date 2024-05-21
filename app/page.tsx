@@ -527,7 +527,7 @@ export default function Home() {
                             <Image draggable="false" className=" rotate-45 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
                       </button>
                     </a>
-                    <a className="cursor-pointer" draggable="false" href="https://lu.ma/mvd">
+                    <a className="cursor-pointer" draggable="false" href="https://lu.ma/5tngn4bz">
                       <button  type="button" className="group text-gray-900 rounded px-4 py-1 flex flex-row items-center">
                         <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
                         <div className="text-center text-sm font-dm text-white">Attend</div>
