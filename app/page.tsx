@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Draggable from 'react-draggable';
 import { useState, useLayoutEffect, useEffect } from 'react';
+import { PlayProvider } from "@playhtml/react";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(true);
@@ -264,9 +265,6 @@ export default function Home() {
           </Draggable>
         )}
         
-          
-
-
           {isSecondVisible && secondPosition && (
           <Draggable>
             <div
@@ -301,38 +299,38 @@ export default function Home() {
           </Draggable>
         )}
 
-      {IsThirdVisible && thirdPosition && (
-          <Draggable>
-            <div
-              className="absolute z-40 w-[300px] h-[200px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
-              style={{ top: thirdPosition.top, left: thirdPosition.left }}>
-              <div className="absolute w-[498px] h-[398px] border rounded-innerw border-white opacity-20"></div>
-              <div className="flex flex-col items-center">
-                <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
-                  <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
-                    <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
-                    <div className="h-3 w-3 rounded-full bg-yelloww"></div>
-                    <div className="h-3 w-3 rounded-full bg-greenw"></div>
-                    <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">darwin.gif</div>
+        {IsThirdVisible && thirdPosition && (
+            <Draggable>
+              <div
+                className="absolute z-40 w-[300px] h-[200px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
+                style={{ top: thirdPosition.top, left: thirdPosition.left }}>
+                <div className="absolute w-[498px] h-[398px] border rounded-innerw border-white opacity-20"></div>
+                <div className="flex flex-col items-center">
+                  <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                    <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                      <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
+                      <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                      <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                      <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">darwin.gif</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <Image
+                      className=""
+                      src="/steven.gif"
+                      alt=""
+                      draggable="false"
+                      width={300}
+                      height={200}
+                      layout=""
+                      objectFit=""
+                      priority
+                    />
                   </div>
                 </div>
-                <div className="flex flex-col">
-                  <Image
-                    className=""
-                    src="/steven.gif"
-                    alt=""
-                    draggable="false"
-                    width={300}
-                    height={200}
-                    layout=""
-                    objectFit=""
-                    priority
-                  />
-                </div>
               </div>
-            </div>
-          </Draggable>
-        )}
+            </Draggable>
+          )}
 
         {IsFourthVisible && fourthPosition && (
           <Draggable>
@@ -407,149 +405,238 @@ export default function Home() {
           <div
             className="absolute z-40 w-[300px] h-[150px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
             style={{ top: sixthPosition.top, left: sixthPosition.left }}
-          >
-          <div className="absolute w-[298px] h-[148px] border rounded-innerw border-white opacity-20"></div>
-            <div className="flex flex-col items-center">
-              <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
-                <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
-                  <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
-                  <div className="h-3 w-3 rounded-full bg-yelloww"></div>
-                  <div className="h-3 w-3 rounded-full bg-greenw"></div>
-                  <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">beefjerky.w</div>
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <Image
-                  className=""
-                  src="/beefjerky.jpg"
-                  alt=""
-                  draggable="false"
-                  width={300}
-                  height={150}
-                  layout=""
-                  objectFit=""
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </Draggable>
-      )}
-      
-      {IsSeventhVisible && seventhPosition && (
-          <Draggable>
-            <div
-              className="absolute z-40 w-[350px] h-[450px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
-              style={{ top: seventhPosition.top, left: seventhPosition.left }}
             >
-          <div className="absolute w-[348px] h-[448px] border rounded-innerw border-white opacity-20"></div>
-            <div className="flex flex-col items-center">
-              <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
-                <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
-                  <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
-                  <div className="h-3 w-3 rounded-full bg-yelloww"></div>
-                  <div className="h-3 w-3 rounded-full bg-greenw"></div>
-                  <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">zap.gif</div>
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <Image
-                  className=""
-                  src="/zap.gif"
-                  alt=""
-                  draggable="false"
-                  width={350}
-                  height={450}
-                  layout=""
-                  objectFit=""
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </Draggable>
-        )}
-
-      </div>
-    
-      <div className="sm:hidden">
-        <div className="flex flex-col justify-center p-2 space-y-2">
-        <div className="flex flex-row h-24 w-full space-x-2">
-          <div className="relative">
-                <div className="drop-shadow-2xl">
-                    {/* <a className="text-black" href="/about">test</a> */}
-                    <Image className="draggable-false rounded-xl"
-                            src="/logoweb.png"
-                            alt=""
-                            draggable="false"
-                            width={150}
-                            height={0}
-                            layout=""
-                            objectFit=""
-                            priority
-                          />
-                  </div>
-          </div>
-
-        </div>
-        <div className="relative z-20">
-            <div className="drop-shadow-2xl">
-              {/* <a className="text-black" href="/about">test</a> */}
-              <Image className="draggable-false"
-                      src="/terminal.png"
-                      alt=""
-                      draggable="false"
-                      width={400}
-                      height={400}
-                      layout=""
-                      objectFit=""
-                      priority
-                    />
-            </div>
-        </div>
-        <div className="h-36 w-full rounded-xl border border-neutral-800 overflow-hidden drop-shadow-2xl">
-
-              <div className="absolute w-[423px] h-[343px] border rounded-innerw border-white opacity-20"></div>
-              <div className="flex flex-col">
+            <div className="absolute w-[298px] h-[148px] border rounded-innerw border-white opacity-20"></div>
+              <div className="flex flex-col items-center">
                 <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
                   <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
                     <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
                     <div className="h-3 w-3 rounded-full bg-yelloww"></div>
                     <div className="h-3 w-3 rounded-full bg-greenw"></div>
-                    <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">full_website_coming_soon</div>
+                    <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">beefjerky.w</div>
                   </div>
                 </div>
-                 <div className="absolute z-100 mt-7 pt-3 h-32 bg-pink-500 opacity-90 w-full">
-                    <a className="cursor-pointer" draggable="false" href="https://forms.gle/wHnKsnj8U9PLc4bN7">
-                      <button  type="button" className="group text-gray-900 px-4 py-1 flex flex-row items-center">
-                        <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
-                        <div className="text-center text-sm font-dm text-white">Demo</div>
-                            <Image draggable="false" className=" rotate-45 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
-                      </button>
-                    </a>
-                    <a className="cursor-pointer" draggable="false" href="https://lu.ma/5tngn4bz">
-                      <button  type="button" className="group text-gray-900 rounded px-4 py-1 flex flex-row items-center">
-                        <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
-                        <div className="text-center text-sm font-dm text-white">Attend</div>
-                            <Image draggable="false" className=" rotate-45 transition duration-150 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
-                      </button>
-                    </a>
-                    <a className="cursor-pointer" draggable="false" href="https://twitter.com/mvdemos_">
-                      <button  type="button" className="group text-gray-900 rounded px-4 py-1 flex flex-row items-center">
-                        <div className="-ml-1.5 absolute w-0 bg-white h-6 group-hover:w-32 opacity-40"></div>
-                        <div className="text-center text-sm font-dmx text-white">Twitter</div>
-                            <Image draggable="false" className=" rotate-45 transition duration-150 ml-2 mt-0.5 fill-white" src="/arrow.svg" width={15} height={15} alt="arrow"/>
-                      </button>
-                    </a>
-                  </div>
+                <div className="flex flex-col">
+                  <Image
+                    className=""
+                    src="/beefjerky.jpg"
+                    alt=""
+                    draggable="false"
+                    width={300}
+                    height={150}
+                    layout=""
+                    objectFit=""
+                    priority
+                  />
+                </div>
               </div>
             </div>
-
-      </div>
-      </div>
-    
-    </div>
+          </Draggable>
+        )}
       
+        {IsSeventhVisible && seventhPosition && (
+            <Draggable>
+              <div
+                className="absolute z-40 w-[350px] h-[450px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
+                style={{ top: seventhPosition.top, left: seventhPosition.left }}
+              >
+              <div className="absolute w-[348px] h-[448px] border rounded-innerw border-white opacity-20"></div>
+                <div className="flex flex-col items-center">
+                  <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                    <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                      <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
+                      <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                      <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                      <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">zap.gif</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <Image
+                      className=""
+                      src="/zap.gif"
+                      alt=""
+                      draggable="false"
+                      width={350}
+                      height={450}
+                      layout=""
+                      objectFit=""
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </Draggable>
+          )}
+      </div>
 
+      {/* mobile */}
+
+      <div className="sm:hidden relative bg-white h-screen w-full p-2 space-y-2">
+          <div className="relative flex flex-row w-full items-center justify-between">
+            <div className="relative w-40 h-[105px] z-50 rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl">
+              <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] border rounded-innerw border-white opacity-20"></div>
+                <div className="flex flex-col items-center">
+                  <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                    <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                      <button className="h-3 w-3 rounded-full bg-redw "></button>
+                      <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                      <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                      <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">logo.sh</div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col">
+                    <Image className=""
+                            src="/logo.png"
+                            alt=""
+                            draggable="false"
+                            width={200}
+                            height={200}
+                            layout=""
+                            objectFit=""
+                            priority
+                          />
+                  </div>
+                </div>
+              </div>
+              <div className="relative animate-bounce">
+                    <img src="/tamo.gif" className="mt-4 pl-2 h-12"></img>
+              </div>
+              <div className="relative">
+                    <img src="/dolan.gif" className="h-24"></img>
+              </div>
+        </div>
+        <div className="relative z-50 w-full  rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl">
+              <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] border rounded-innerw border-white opacity-20"></div>
+              <div className="flex flex-col items-center">
+                <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                  <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                      <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
+                      <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                      <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                      <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">desc.sh</div>
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                    <Image
+                      className=""
+                      src="/desc.png"
+                      alt=""
+                      draggable="false"
+                      width={425}
+                      height={400}
+                      layout=""
+                      objectFit=""
+                      priority
+                    />
+                </div>
+              </div>
+          </div>
+          
+            <div className="flex flex-row w-full space-x-2">
+              <a className="cursor-pointer" href="https://lu.ma/5tngn4bz">
+                <div className="relative z-50 w-full rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl">
+                  <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] border rounded-innerw border-white opacity-20"></div>
+                  <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] flex flex-col justify-center items-center">
+                      <img draggable="false" className="relative h-12 w-12 rotate-45 transition duration-150 ml-2 mt-0.5 fill-pink-400" src="/arrow.svg"/>
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                      <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                        <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
+                        <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                        <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                        <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">luma.attend</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <Image
+                        className="bg-zinc-900 opacity-50"
+                        src="/sm_luma.avif"
+                        alt=""
+                        draggable="false"
+                        width={450}
+                        height={425}
+                        layout=""
+                        objectFit=""
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a className="cursor-pointer" href="https://lu.ma/5tngn4bz">
+                <div className="relative z-50 w-full rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl">
+                  <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] border rounded-innerw border-white opacity-20"></div>
+                  <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] flex flex-col justify-center items-center">
+                      <img draggable="false" className="relative h-12 w-12 rotate-45 transition duration-150 ml-2 mt-0.5 fill-pink-400" src="/arrow.svg"/>
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                      <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                        <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
+                        <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                        <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                        <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">demo.apply</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col">
+                      <Image
+                        className="bg-zinc-900 opacity-50"
+                        src="/weld.png"
+                        alt=""
+                        draggable="false"
+                        width={450}
+                        height={425}
+                        layout=""
+                        objectFit=""
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div className="pb-2">
+              <a className="cursor-pointer" href="https://x.com/mvdemos_/status/1793397722357383480">
+                  <div className="relative z-50 w-full rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl">
+                    <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] border rounded-innerw border-white opacity-20"></div>
+                    <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] flex flex-col justify-center items-center">
+                        <img draggable="false" className="relative h-12 w-12 rotate-45 transition duration-150 ml-2 mt-0.5 fill-pink-400" src="/arrow.svg"/>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
+                        <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
+                          <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
+                          <div className="h-3 w-3 rounded-full bg-yelloww"></div>
+                          <div className="h-3 w-3 rounded-full bg-greenw"></div>
+                          <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">twitter dot com</div>
+                        </div>
+                      </div>
+                      <div className="flex flex-col">
+                        <Image
+                          className="bg-zinc-900 opacity-50"
+                          src="/dali.gif"
+                          alt=""
+                          draggable="false"
+                          width={450}
+                          height={425}
+                          layout=""
+                          objectFit=""
+                          priority
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+            </div>
+          
+
+      </div>
+    </div>
+    
+      
   );
 }
