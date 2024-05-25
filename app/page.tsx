@@ -565,7 +565,7 @@ export default function Home() {
                   </div>
                 </div>
               </a>
-              <a className="cursor-pointer" href="https://lu.ma/5tngn4bz">
+              <a className="cursor-pointer" href="https://forms.gle/Q4JpYkfQxpWw2DjY7">
                 <div className="relative z-50 w-full rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl">
                   <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] border rounded-innerw border-white opacity-20"></div>
                   <div className="absolute h-[calc(100%-0.5px)] w-[calc(100%-0.5px)] m-[0.5px] flex flex-col justify-center items-center">
