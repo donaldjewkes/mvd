@@ -201,7 +201,7 @@ export default function Home() {
                     <button className="h-3 w-3 rounded-full bg-redw cursor-pointer" ></button>
                     <div className="h-3 w-3 rounded-full bg-yelloww"></div>
                     <div className="h-3 w-3 rounded-full bg-greenw"></div>
-                    <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">hi.invite</div>
+                    <div className="pl-1 text-sm text-neutral-300 opacity-80 font-inter font-semibold">hi.inv</div>
                   </div>
                 </div>
                 <div className="absolute z-100 mt-7 pt-3 h-32 bg-pink-500 opacity-90 w-full">
