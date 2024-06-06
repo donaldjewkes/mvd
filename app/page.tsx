@@ -156,10 +156,10 @@ export default function Home() {
         {isVisible && position && (
           <Draggable>
             <div
-              className=" absolute z-50 w-[425px] h-[345px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
+              className=" absolute z-50 w-[425px] h-[360px] rounded-xl bg-neutral-900 border border-neutral-800 overflow-hidden drop-shadow-2xl"
               style={{ top: position.top, left: position.left }}
             >
-              <div className="absolute w-[423px] h-[343px] border rounded-innerw border-white opacity-20"></div>
+              <div className="absolute w-[423px] h-[358px] border rounded-innerw border-white opacity-20"></div>
               <div className="flex flex-col items-center">
                 <div className="h-7 w-full bg-neutral-700 flex flex-row items-center">
                   <div className="absolute left-0 flex flex-row items-center space-x-2 p-2">
