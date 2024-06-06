@@ -9,7 +9,7 @@ npm run dev
 ```
 
 ### deployment
-main branch deploys here: https://mvd-git-main-donalds-projects-9dd74069.vercel.app/
+main branch deploys here: https://minimum-viable-demos-git-main-mvd-fe05249c.vercel.app/
 
 pushing to prod:
 ```git checkout prod
