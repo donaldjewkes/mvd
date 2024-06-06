@@ -1,15 +1,19 @@
 ### MVD website
 mvdemos.com
 
-## Dev
+### dev
 
-run development server
-```bash
+run dev server
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+### deployment
+main branch deploys here: https://mvd-git-main-donalds-projects-9dd74069.vercel.app/
+
+pushing to prod:
+```git checkout prod
+git fetch
+git merge origin/main --ff-only
+git push
 ```
