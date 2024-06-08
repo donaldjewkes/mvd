@@ -3,8 +3,18 @@
 import Image from "next/image";
 import Draggable from "react-draggable";
 import { useState, useLayoutEffect, useEffect } from "react";
-import { PlayProvider } from "@playhtml/react";
 import dynamic from "next/dynamic";
+
+const PlayProvider = dynamic(
+  () => {
+    if (typeof window !== "undefined") {
+      return import("@playhtml/react").then((mod) => mod.PlayProvider);
+    } else {
+      return Promise.resolve(() => <></>);
+    }
+  },
+  { ssr: false },
+);
 
 const CanMoveElement = dynamic(
   () => import("@playhtml/react").then((mod) => mod.CanMoveElement),
@@ -55,9 +65,7 @@ export default function Home() {
 
   useLayoutEffect(() => {
     const timer = setTimeout(() => {
-      const randomTop = 0 * (window.innerHeight - 345); // 345 is the height of the element
-      const randomLeft = 0 * (window.innerWidth - 425); // 425 is the width of the element
-      setPosition({ top: randomTop, left: randomLeft });
+      setPosition({ top: 0, left: 0 });
     }, 200); // 500ms delay
 
     return () => clearTimeout(timer);
@@ -65,9 +73,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const secondRandomTop = 0.15 * (window.innerHeight - 400); // 400 is the height of the second element
-      const secondRandomLeft = 0.15 * (window.innerWidth - 500); // 500 is the width of the second element
-      setSecondPosition({ top: secondRandomTop, left: secondRandomLeft });
+      setSecondPosition({ top: 0, left: 0 });
     }, 350); // 1 second delay
 
     return () => clearTimeout(timer);
@@ -82,9 +88,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const thirdRandomTop = 0.25 * (window.innerHeight - 200); // 200 is the height of the third element
-      const thirdRandomLeft = 0.25 * (window.innerWidth - 300); // 300 is the width of the third element
-      setThirdPosition({ top: thirdRandomTop, left: thirdRandomLeft });
+      setThirdPosition({ top: 0, left: 0 });
     }, 500); // 700ms delay
 
     return () => clearTimeout(timer);
@@ -99,9 +103,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const fourthRandomTop = 0.35 * (window.innerHeight - 200); // Adjust height
-      const fourthRandomLeft = 0.35 * (window.innerWidth - 300); // Adjust width
-      setFourthPosition({ top: fourthRandomTop, left: fourthRandomLeft });
+      setFourthPosition({ top: 0, left: 0 });
     }, 700); // 1.2 second delay
     return () => clearTimeout(timer);
   }, []);
@@ -115,9 +117,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const fifthRandomTop = 0.55 * (window.innerHeight - 460); // Adjust height
-      const fifthRandomLeft = 0.55 * (window.innerWidth - 200); // Adjust width
-      setFifthPosition({ top: fifthRandomTop, left: fifthRandomLeft });
+      setFifthPosition({ top: 0, left: 0 });
     }, 950);
     return () => clearTimeout(timer);
   }, []);
@@ -131,9 +131,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const sixthRandomTop = 0.7 * (window.innerHeight - 200); // Adjust height
-      const sixthRandomLeft = 0.7 * (window.innerWidth - 300); // Adjust width
-      setSixthPosition({ top: sixthRandomTop, left: sixthRandomLeft });
+      setSixthPosition({ top: 0, left: 0 });
     }, 1100); // Adjust delay as needed
     return () => clearTimeout(timer);
   }, []);
@@ -147,9 +145,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const seventhRandomTop = 0.9 * (window.innerHeight - 200); // Adjust height
-      const seventhRandomLeft = 0.9 * (window.innerWidth - 300); // Adjust width
-      setSeventhPosition({ top: seventhRandomTop, left: seventhRandomLeft });
+      setSeventhPosition({ top: 0, left: 0 });
     }, 1250); // Adjust delay as needed
     return () => clearTimeout(timer);
   }, []);
@@ -163,9 +159,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const eighthRandomTop = 1 * (window.innerHeight - 200); // Adjust height
-      const eighthRandomLeft = 1 * (window.innerWidth - 300); // Adjust width
-      setEighthPosition({ top: eighthRandomTop, left: eighthRandomLeft });
+      setEighthPosition({ top: 0, left: 0 });
     }, 300); // Adjust delay as needed
     return () => clearTimeout(timer);
   }, []);
